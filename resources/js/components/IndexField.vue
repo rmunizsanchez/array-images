@@ -5,6 +5,8 @@
             :src="img.url"
             :alt="img.name"
             :key="index"
+            :title="img.crc32"
+            loading="lazy"
             class="rounded h-10 mr-2 border border-primary"
         >
     </span>
