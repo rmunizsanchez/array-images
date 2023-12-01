@@ -1,8 +1,8 @@
 import 'viewerjs/dist/viewer.css';
-import Viewer from 'v-viewer';
-Nova.booting((Vue, router) => {
-    Vue.use(Viewer);
-    Vue.component('index-array-images', require('./components/IndexField'));
-    Vue.component('detail-array-images', require('./components/DetailField'));
-    Vue.component('form-array-images', require('./components/FormField'));
+import VueViewer from 'v-viewer';
+Nova.booting((app, store) => {
+    app.use(VueViewer);
+    app.component('index-array-images', require('./components/IndexField'));
+    app.component('detail-array-images', require('./components/DetailField'));
+    app.component('form-array-images', require('./components/FormField'));
 })

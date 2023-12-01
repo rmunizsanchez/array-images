@@ -77,17 +77,18 @@ export default {
             fd.append('disk', this.field.disk);
             fd.append('path', this.field.path);
 
-            axios.post('/nova-vendor/array-images/upload', fd)
+            Nova.request()
+            /*axios.post('/nova-vendor/array-images/upload', fd)
                 .then(res => {
                     for (var i = 0; i < res.data.length; i++) {
                         app.images.push(res.data[i]);
                     }
                     app.value = JSON.stringify(app.images)
-                });
+                });*/
         },
 
         deleteImage(index) {
-            axios.delete('/nova-vendor/array-images/delete/'+this.images[index].name);
+            //axios.delete('/nova-vendor/array-images/delete/'+this.images[index].name);
             this.images.splice(index, 1);
             this.value = JSON.stringify(this.images);
         },
